@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version: 2.2.0
+test:
+  pre:
+    - rake install
+  override:
+    - github_repo_sort
+    - ruby test/sort_test.rb test/assets/list
