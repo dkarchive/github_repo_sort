@@ -9,9 +9,8 @@ module GitHubRepoSort
 
   class << self
     def info(c, list, name)
-
       info = []
-      Parallel.each(list, :in_threads => 1, :progress => "Sorting") do |x|
+      Parallel.each(list, :in_threads => 10, :progress => "Sorting") do |x|
         x = x.sub 'https://github.com/', ''
 
         begin
