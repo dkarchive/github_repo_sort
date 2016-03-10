@@ -29,7 +29,7 @@ module GitHubRepoSort
 
         info.push i
       end # parallel
-      puts ''
+      # puts ''
 
       info
     end
