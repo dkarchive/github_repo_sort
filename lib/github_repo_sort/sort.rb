@@ -1,6 +1,7 @@
 # Sorting
 module GitHubRepoSort
-  require 'github_repo_sort/info'
+  require 'github_repo_sort/repos'
+  
   class << self
     def sort(list, options=nil, compact=true)
       if options.nil?
@@ -18,7 +19,7 @@ module GitHubRepoSort
           Octokit::Client.new(:netrc => true)
         end
 
-      i = info(c, list, by) do |e|
+      i = repos(c, list, by) do |e|
         yield e if block_given?
       end
 

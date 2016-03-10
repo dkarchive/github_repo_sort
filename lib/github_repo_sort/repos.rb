@@ -8,7 +8,7 @@ module GitHubRepoSort
   NETRC_GITHUB_MACHINE = 'api.github.com'
 
   class << self
-    def info(c, list, name)
+    def repos(c, list, name)
       info = []
       Parallel.each(list, :in_threads => 10, :progress => "Sorting") do |x|
         x = x.sub 'https://github.com/', ''
@@ -16,7 +16,6 @@ module GitHubRepoSort
         begin
           r = c.repo x
         rescue => e
-          # puts "Error: #{e}"
           yield e
           next
         end
@@ -29,7 +28,6 @@ module GitHubRepoSort
 
         info.push i
       end # parallel
-      # puts ''
 
       info
     end
