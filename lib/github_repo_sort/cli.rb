@@ -2,7 +2,6 @@
 module GitHubRepoSort
   require 'github_repo_sort/version'
   require 'github_repo_sort/sort'
-  require 'netrc'
 
   class << self
     def usage
