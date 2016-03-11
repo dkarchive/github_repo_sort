@@ -1,4 +1,4 @@
-# Sorting
+# Get repos
 module GitHubRepoSort
   require 'octokit'
   require 'netrc'
