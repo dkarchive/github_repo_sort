@@ -39,7 +39,7 @@ What can you sort by?
 
 ## Example
 
-- [awesome status](https://github.com/dkhamsing/awesome_bot/blob/master/status.md)
+- [awesome status](https://github.com/dkhamsing/awesome_bot/blob/master/status)
 
 ## Contact
 
