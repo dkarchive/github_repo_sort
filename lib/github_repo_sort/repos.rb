@@ -16,6 +16,7 @@ module GitHubRepoSort
         begin
           r = c.repo x
         rescue => e
+          puts "Issue with #{x}"
           yield e
           next
         end
