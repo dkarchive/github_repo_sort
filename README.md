@@ -1,6 +1,6 @@
 # github_repo_sort
 
-Sort a list of GitHub repos
+Sort a list of GitHub repos (get GitHub repo information).
 
 ## Installation
 
@@ -25,6 +25,7 @@ GitHubRepoSort::sort(list, {'by' => 'stargazer_count', 'order' => 'descending'})
 # => ['dkhamsing/awesome_bot', 'dkhamsing/update_profile_pic', 'dkhamsing/podspec']
 
 # note: star count descending is the default, so you could also use GitHubRepoSort(list)
+# note: a data.json file is created with all the data gathered by github_repo_sort
 ```
 
 What can you sort by?
