@@ -12,6 +12,7 @@ module GitHubRepoSort
       info = []
       Parallel.each(list, :in_threads => 10, :progress => "Sorting") do |x|
         x = x.sub 'https://github.com/', ''
+        x = x.strip
 
         begin
           r = c.repo x
